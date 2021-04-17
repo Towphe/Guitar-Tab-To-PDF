@@ -7,6 +7,6 @@ namespace GuitarTabPDF.Services
 {
     public interface ITabConverter
     {
-        void Convert(string link);
+        string Convert(string link);
     }
 }
