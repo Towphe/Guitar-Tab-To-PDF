@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GuitarTabPDF.Services;
 
 namespace GuitarTabPDF
 {
@@ -15,9 +16,10 @@ namespace GuitarTabPDF
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<ITabConverter, LinkTabConverter>();
             services.AddControllersWithViews();
         }
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ITabConverter tabConverter)
         {
             if (env.IsDevelopment())
             {

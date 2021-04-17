@@ -6,7 +6,11 @@
 
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Services\" />
+    <Folder Include="Tabs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
   </ItemGroup>
 
 </Project>
